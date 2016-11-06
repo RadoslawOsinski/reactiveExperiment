@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0" metadata-complete="true">
+
+    <display-name>reactiveExperiment</display-name>
+
+    <distributable/>
+
+    <filter>
+        <filter-name>encoding-filter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <async-supported>true</async-supported>
+    </filter>
+
+    <locale-encoding-mapping-list>
+        <locale-encoding-mapping>
+            <locale>en</locale>
+            <encoding>UTF-8</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping>
+            <locale>pl</locale>
+            <encoding>UTF-8</encoding>
+        </locale-encoding-mapping>
+    </locale-encoding-mapping-list>
+
+    <filter-mapping>
+        <filter-name>encoding-filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>
+                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>eu.com.cwsfe.reactive.ReactiveExperimentContext</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <!-- Configure ContextLoaderListener to use AnnotationConfigWebApplicationContext
+       instead of the default XmlWebApplicationContext -->
+    <context-param>
+        <param-name>contextClass</param-name>
+        <param-value>
+            org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+        </param-value>
+    </context-param>
+
+    <!-- Configuration locations must consist of one or more comma- or space-delimited
+       fully-qualified @Configuration classes. Fully-qualified packages may also be
+       specified for component-scanning -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>eu.com.cwsfe.reactive.ReactiveExperimentContext</param-value>
+    </context-param>
+
+    <servlet-mapping>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+</web-app>

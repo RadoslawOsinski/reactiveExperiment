@@ -60,4 +60,9 @@ public class ReactiveController {
         return new Message("quick message");
     }
 
+    @RequestMapping("/healthCheck")
+    public String getHealthCheck() {
+        return "OK";
+    }
+
 }
