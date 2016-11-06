@@ -4,6 +4,7 @@
     <title>homePage</title>
     <script src="${pageContext.request.contextPath}/resources/js/jquery-3.1.1.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/homePage.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/rx.all.js"></script>
 </head>
 <body>
 
@@ -24,6 +25,10 @@
     <br/>
     <input type="button" id="getAsyncMessageFutureAsyncSync" value="getAsyncMessageFutureAsync sync"/>
     <input type="button" id="getAsyncMessageFutureAsyncAsync" value="getAsyncMessageFutureAsync async"/>
+
+    <br/>
+    <br/>
+    <input type="button" id="getAsyncMessageObservableAsync" value="getAsyncMessageObservableAsync async"/>
 
 </body>
 </html>

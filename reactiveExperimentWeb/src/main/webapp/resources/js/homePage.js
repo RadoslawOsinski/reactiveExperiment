@@ -168,4 +168,26 @@ $(document).ready(function () {
         });
     });
 
+    $('#getAsyncMessageObservableAsync').click(function () {
+        console.log('getAsyncMessageObservableAsync clicked!');
+        //todo use new rx.js
+        // $.ajax({
+        //     type: 'GET',
+        //     async: true,
+        //     contentType: 'application/json;charset=utf-8',
+        //     dataType: 'json',
+        //     url: 'http://localhost:8080/getAsyncMessageObservableAsync',
+        //     data: '',
+        //     success: function (response) {
+        //         console.log('getAsyncMessageObservableAsync success: ' + response.text);
+        //     },
+        //     error: function (xhr) {
+        //         console.log('getAsyncMessageObservableAsync error: ' + xhr);
+        //     },
+        //     complete: function (xhr) {
+        //         console.log('getAsyncMessageObservableAsync complete: ' + xhr.responseText);
+        //     }
+        // });
+    });
+
 });
