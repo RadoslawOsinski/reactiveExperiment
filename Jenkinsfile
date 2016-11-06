@@ -1,5 +1,5 @@
  node {
-    stage 'Build and Test' {
+    stage('Build and Test') {
         sh './gradlew build'
     }
     stage('SonarQube analysis') {
