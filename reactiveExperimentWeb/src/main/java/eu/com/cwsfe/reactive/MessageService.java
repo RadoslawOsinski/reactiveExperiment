@@ -28,7 +28,7 @@ class MessageService {
         return Observable.<Message>create(s -> {
             LOGGER.info("Start: Executing slow task in Message Service");
             delay(3000);
-            s.onNext(new Message(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE)));
+            s.onNext(new Message(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)));
             LOGGER.info("End: Executing slow task in Message Service");
             s.onCompleted();
         }).subscribeOn(Schedulers.from(customObservableExecutor));
@@ -39,7 +39,7 @@ class MessageService {
             LOGGER.info("Start: Executing slow task in Message Service");
             delay(4000);
             LOGGER.info("End: Executing slow task in Message Service");
-            return new Message(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE));
+            return new Message(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
         }, futureExecutor);
     }
 
