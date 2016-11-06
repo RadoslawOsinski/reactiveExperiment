@@ -57,7 +57,7 @@ public class ReactiveController {
 
     @RequestMapping("/quickMessage")
     public Message getAFastMessage() {
-        return new Message("quick message");
+        return new Message(this.messageService.getMessageContent());
     }
 
     @RequestMapping("/healthCheck")

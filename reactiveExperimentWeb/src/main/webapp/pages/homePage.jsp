@@ -7,7 +7,23 @@
 </head>
 <body>
 
-    <input type="button" id="quickMessage" value="quick message"/>
+    <input type="button" id="quickMessageSync" value="quick message sync"/>
+    <input type="button" id="quickMessageAsync" value="quick message async"/>
+
+    <br/>
+    <br/>
+    <input type="button" id="getAsyncMessageObservableBlockingSync" value="getAsyncMessageObservableBlocking sync"/>
+    <input type="button" id="getAsyncMessageObservableBlockingAsync" value="getAsyncMessageObservableBlocking async"/>
+
+    <br/>
+    <br/>
+    <input type="button" id="getAsyncMessageFutureBlockingSync" value="getAsyncMessageFutureBlocking sync"/>
+    <input type="button" id="getAsyncMessageFutureBlockingAsync" value="getAsyncMessageFutureBlocking async"/>
+
+    <br/>
+    <br/>
+    <input type="button" id="getAsyncMessageFutureAsyncSync" value="getAsyncMessageFutureAsync sync"/>
+    <input type="button" id="getAsyncMessageFutureAsyncAsync" value="getAsyncMessageFutureAsync async"/>
 
 </body>
 </html>

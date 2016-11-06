@@ -51,4 +51,7 @@ class MessageService {
         }
     }
 
+    String getMessageContent() {
+        return LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME);
+    }
 }
