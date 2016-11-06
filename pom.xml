@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>eu.cwsfe.reactive</groupId>
-    <artifactId>experiment</artifactId>
+    <artifactId>reactiveExperiment</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -16,6 +16,5 @@
             <version>4.2.4.RELEASE</version>
         </dependency>
     </dependencies>
-
 
 </project>
