@@ -15,7 +15,6 @@
     //
     //}
     stage('Archive results') {
-        archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
-        archiveArtifacts artifacts: '**/build/libs/*.war', fingerprint: true
+        archiveArtifacts artifacts: '**/build/libs/*.jar,**/build/libs/*.war', fingerprint: true
     }
  }
